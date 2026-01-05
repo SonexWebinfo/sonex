@@ -1,7 +1,8 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import CompanyTimeline from "@/components/About/CompanyTimeline";
-import CounterSection from "@/components/About/CounterSection";
+import CounterSection from "@/components/Common/CounterSection";
+import Breadcrumb from "@/components/Common/Breadcrumb";
 
 const AboutPage = () => {
   return (
