@@ -10,20 +10,33 @@ module.exports = {
                Animations
             ========================= */
             animation: {
-                scroll: "scroll 30s linear infinite",
+                // Right → Left (logos, etc.)
+                scrollRTL: "scrollRTL 35s linear infinite",
+
+                // Left → Right (testimonials)
+                scrollLTR: "scrollLTR 40s linear infinite",
+
+                // Floating blobs
                 blob: "blob 30s infinite",
-                scroll: "scroll 35s linear infinite", // increase seconds = slower
             },
 
             /* =========================
                Keyframes
             ========================= */
             keyframes: {
-                scroll: {
+                // Right → Left
+                scrollRTL: {
                     "0%": { transform: "translateX(0)" },
                     "100%": { transform: "translateX(-50%)" },
                 },
 
+                // Left → Right
+                scrollLTR: {
+                    "0%": { transform: "translateX(-50%)" },
+                    "100%": { transform: "translateX(0)" },
+                },
+
+                // Gradient blobs
                 blob: {
                     "0%": {
                         transform: "translate(0px, 0px) scale(1)",
