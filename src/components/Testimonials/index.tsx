@@ -10,7 +10,7 @@ const testimonialData: Testimonial[] = [
     name: "Musharof Chy",
     designation: "Founder @TailGrids",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Our members are so impressed. It's intuitive, clean, and distraction free.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
@@ -45,30 +45,32 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
+    <section className="relative bg-gray-light py-16 md:py-20 lg:py-28 dark:bg-bg-color-dark overflow-hidden">
       <div className="container">
         <SectionTitle
           title="What Our Clients Say"
           paragraph="Trusted by startups, enterprises, and global brands worldwide."
           center
         />
+      </div>
 
-        {/* Slider */}
-        <div className="group relative overflow-hidden">
-          <div className="flex w-max animate-scrollLTR gap-8 group-hover:[animation-play-state:paused]">
-            {[...testimonialData, ...testimonialData].map(
-              (testimonial, index) => (
-                <div
-                  key={index}
-                  className="w-[350px] flex-shrink-0 transition duration-300 hover:scale-105"
-                >
-                  <SingleTestimonial testimonial={testimonial} />
-                </div>
-              )
-            )}
-          </div>
+      {/* SLIDER */}
+      <div className="group relative w-full overflow-hidden">
+        <div className="flex w-max animate-scrollLTR group-hover:[animation-play-state:paused]">
+          {[...testimonialData, ...testimonialData].map((testimonial, index) => (
+            <div
+              key={index}
+              className="w-[320px] md:w-[360px] px-4 transition-transform duration-300 hover:scale-105"
+            >
+              <SingleTestimonial testimonial={testimonial} />
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* Fade edges */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-gray-light dark:from-bg-color-dark"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-gray-light dark:from-bg-color-dark"></div>
     </section>
   );
 };
