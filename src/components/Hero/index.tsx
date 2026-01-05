@@ -9,7 +9,7 @@ const Hero = () => {
           {/* LEFT CONTENT */}
           <div className="text-center md:text-left">
             <h1 className="mb-6 text-4xl font-bold leading-tight text-black dark:text-white sm:text-5xl">
-              Sonex Infotech <br />
+
               <span className="text-primary">
                 Your Trusted Partner for Innovative IT Solutions
               </span>
