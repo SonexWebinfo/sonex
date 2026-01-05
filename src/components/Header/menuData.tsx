@@ -88,7 +88,7 @@ const menuData: Menu[] = [
       {
         id: 65,
         title: "404 Error",
-        path: "/error-404",
+        path: "/error",
         newTab: false,
       },
     ],
