@@ -12,6 +12,7 @@ module.exports = {
             animation: {
                 scroll: "scroll 30s linear infinite",
                 blob: "blob 30s infinite",
+                scroll: "scroll 35s linear infinite", // increase seconds = slower
             },
 
             /* =========================
