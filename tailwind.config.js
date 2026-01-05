@@ -1,8 +1,13 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+    content: [
+        "./app/**/*.{js,ts,jsx,tsx}",
+        "./src/**/*.{js,ts,jsx,tsx}",
+    ],
     theme: {
         extend: {
             animation: {
-                scroll: "scroll 25s linear infinite",
+                scroll: "scroll 30s linear infinite",
             },
             keyframes: {
                 scroll: {
@@ -12,4 +17,5 @@ module.exports = {
             },
         },
     },
+    plugins: [],
 };

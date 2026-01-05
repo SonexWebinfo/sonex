@@ -13,32 +13,32 @@ const partners = [
 
 const PartnerSlider = () => {
     return (
-        <section className="py-16 md:py-20 lg:py-24 bg-gray-50 dark:bg-gray-dark">
+        <section className="bg-gray-50 py-16 dark:bg-gray-dark md:py-20 lg:py-24">
             <div className="container">
-                {/* Section Title */}
+                {/* Title */}
                 <div className="mb-10 text-center">
                     <h2 className="text-3xl font-bold text-black dark:text-white">
-                        Trusted by Our Partners
+                        Trusted Partners
                     </h2>
                     <p className="mt-3 text-body-color dark:text-body-color-dark">
-                        We collaborate with industry-leading companies worldwide.
+                        We proudly collaborate with industry-leading companies worldwide.
                     </p>
                 </div>
 
                 {/* Slider */}
-                <div className="relative overflow-hidden">
-                    <div className="flex w-max animate-scroll gap-12">
+                <div className="group relative overflow-hidden">
+                    <div className="flex w-max gap-14 animate-scroll group-hover:pause-animation">
                         {[...partners, ...partners].map((partner, index) => (
                             <div
                                 key={index}
-                                className="flex items-center justify-center min-w-[160px]"
+                                className="flex min-w-[140px] items-center justify-center sm:min-w-[180px]"
                             >
                                 <Image
                                     src={partner.logo}
                                     alt={partner.name}
-                                    width={140}
+                                    width={150}
                                     height={80}
-                                    className="opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+                                    className="opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 dark:invert"
                                 />
                             </div>
                         ))}
