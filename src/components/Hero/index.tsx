@@ -27,7 +27,7 @@ const Hero = () => {
                 href="/contact"
                 className="rounded-md bg-primary px-8 py-4 text-white transition hover:bg-primary/90"
               >
-                Get Started
+                Contact Us
               </Link>
 
               <Link
