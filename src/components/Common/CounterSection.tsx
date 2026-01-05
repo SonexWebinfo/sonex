@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const counters = [
-    { label: "Projects Delivered", value: 120 },
-    { label: "Happy Clients", value: 80 },
-    { label: "Countries Served", value: 10 },
+    { label: "Projects Delivered", value: 125 },
+    { label: "Happy Clients", value: 95 },
+    { label: "Countries Served", value: 5 },
 ];
 
 const AnimatedCounter = ({ value }: { value: number }) => {
@@ -46,22 +46,24 @@ const AnimatedCounter = ({ value }: { value: number }) => {
 
 const CounterSection = () => {
     return (
-        <section className="relative overflow-hidden bg-primary py-16 md:py-20">
+        <section className="relative overflow-hidden bg-[#F4F7FF] py-16 md:py-20 dark:bg-gray-dark">
             <div className="container relative z-10">
                 <div className="grid grid-cols-1 gap-10 text-center sm:grid-cols-3">
                     {counters.map((item, index) => (
                         <div key={index}>
-                            <h3 className="mb-2 text-4xl font-bold text-white md:text-5xl">
+                            <h3 className="mb-2 text-4xl font-bold text-black dark:text-white md:text-5xl">
                                 <AnimatedCounter value={item.value} />
                             </h3>
-                            <p className="text-white/80 text-lg">{item.label}</p>
+                            <p className="text-body-color dark:text-body-color-dark text-lg">
+                                {item.label}
+                            </p>
                         </div>
                     ))}
                 </div>
             </div>
 
-            {/* Soft background overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-transparent to-white/5"></div>
+            {/* subtle overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-transparent to-white/40 dark:from-black/20 dark:to-black/20" />
         </section>
     );
 };
