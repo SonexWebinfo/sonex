@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const counters = [
-    { label: "Projects Delivered", value: 120 },
-    { label: "Happy Clients", value: 80 },
-    { label: "Countries Served", value: 10 },
+    { label: "Projects Delivered", value: 125 },
+    { label: "Happy Clients", value: 95 },
+    { label: "Countries Served", value: 5 },
 ];
 
 const AnimatedCounter = ({ value }: { value: number }) => {
