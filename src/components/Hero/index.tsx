@@ -2,10 +2,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section
-      id="home"
-      className="relative overflow-hidden bg-white pt-[120px] pb-20 dark:bg-gray-dark md:pt-[150px]"
-    >
+    <section id="home" className="relative overflow-hidden bg-white pt-[120px] pb-20 dark:bg-gray-dark md:pt-[150px]">
       <div className="container">
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
 
